@@ -155,3 +155,7 @@ au BufRead,BufNewFile *.thor setf ruby
 " au BufRead,BufNewFile /etc/nginx/conf/* set ft=nginx
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 
+" NERDTree autostart
+if has('gui')
+  autocmd VimEnter * NERDTree
+endif
