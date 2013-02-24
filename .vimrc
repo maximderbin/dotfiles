@@ -158,4 +158,5 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 " NERDTree autostart
 if has('gui')
   autocmd VimEnter * NERDTree
+  autocmd BufWinEnter * silent NERDTreeMirror
 endif
