@@ -34,8 +34,6 @@ Bundle 'skammer/vim-css-color'
 Bundle 'jinfield/vim-nginx'
 Bundle 'digitaltoad/vim-jade'
 
-let g:CommandTMaxFiles=100000
-
 filetype plugin indent on " Required!
 
 " Add recently accessed projects menu (project plugin)
