@@ -42,6 +42,9 @@ set viminfo^=!
 " Command-T options
 let g:CommandTMaxFiles=20000
 
+" NERDtree settings
+map <C-e> :NERDTreeToggle<CR>
+
 " Minibuffer Explorer Settings
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -150,10 +153,3 @@ au BufRead,BufNewFile *.rabl hi def link rubyRabl Function
 au BufRead,BufNewFile *.thor setf ruby
 " au BufRead,BufNewFile /etc/nginx/conf/* set ft=nginx
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx
-
-" NERDTree autostart
-if has('gui')
-  au GUIEnter * :set lines=99999 columns=99999
-  au GUIEnter * NERDTree
-  au BufWinEnter * silent NERDTreeMirror
-endif
