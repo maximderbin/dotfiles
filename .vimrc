@@ -81,11 +81,21 @@ set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 
-set gfn=mono\ 11
+" Colorscheme
+colorscheme solarized
+
+if has('gui_running')
+  set background=dark
+else
+  let g:solarized_termcolors=256
+  set background=dark
+endif
+
 if has('mac')
   set gfn=menlo:h14
+else
+  set gfn=mono\ 11
 endif
-colorscheme desert
 
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
