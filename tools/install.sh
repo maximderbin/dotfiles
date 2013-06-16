@@ -46,4 +46,7 @@ fi
 echo "\033[0;34mSymlinking .zshrc\033[0m"
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+echo "\033[0;34mmv /etc/zshenv /etc/zshrc for vim-rvm scripting \033[0m"
+sudo mv /etc/zshenv /etc/zshrc
+
 echo "\033[0;34mDotfiles is installed...\033[0m"
