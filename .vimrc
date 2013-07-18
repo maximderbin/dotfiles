@@ -44,9 +44,6 @@ let g:CommandTMaxFiles=20000
 " NERDtree settings
 map <C-e> :NERDTreeToggle<CR>
 
-" Change which file opens after executing :Rails command
-let g:rails_default_file='config/routes.rb'
-
 syntax enable
 syntax on
 
