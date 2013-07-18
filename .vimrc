@@ -44,13 +44,6 @@ let g:CommandTMaxFiles=20000
 " NERDtree settings
 map <C-e> :NERDTreeToggle<CR>
 
-" alt+n or alt+p to navigate between entries in QuickFix
-map <silent> <m-p> :cp <cr>
-map <silent> <m-n> :cn <cr>
-
-nmap <silent> <C-i> i<CR><Esc>
-nmap <silent> <C-a> a<CR><Esc>
-
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/routes.rb'
 
