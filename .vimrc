@@ -47,10 +47,10 @@ map <C-e> :NERDTreeToggle<CR>
 syntax enable
 syntax on
 
-"set hidden
 set lazyredraw
 set showmode
 set wildmenu
+set wildignore+=vendor/ruby/*,.git,tmp/*,public/system/*
 
 nmap <silent> ,ev :e $MYVIMRC<cr>
 nmap <silent> ,sv :so $MYVIMRC<cr>
@@ -120,7 +120,6 @@ set history=100
 
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 set scrolloff=8
-"set virtualedit=all
 
 set synmaxcol=2048
 
@@ -132,10 +131,6 @@ set wrap
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняж;abcdefghijklmnopqrstuvwxyz;
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%{exists('g:loaded_rvm')?rvm#statusline():''}%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-16(\ %l,%c-%v\ %)%P
-
-set wildignore+=vendor/ruby/*,.git,tmp/*,public/system/*
-
-let g:ragtat_global_maps=1
 
 hi PreProc guifg=red ctermfg=red guibg=grey15
 au BufRead,BufNewFile *.hamlc setf haml
