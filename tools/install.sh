@@ -46,6 +46,15 @@ fi
 echo "\033[0;34mSymlinking .zshrc\033[0m"
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
+echo "\033[0;34mLooking for an existing zsh aliases...\033[0m"
+if [ -f ~/.aliases ] || [ -h ~/.aliases ]
+then
+  echo "\033[0;33mFound ~/.aliases.\033[0m \033[0;32mBacking up to ~/.aliases.old\033[0m";
+  mv ~/.zshrc ~/.aliases.old;
+fi
+echo "\033[0;34mSymlinking .zshrc\033[0m"
+ln -s ~/.dotfiles/.aliases ~/.aliases
+
 echo "\033[0;34mmv /etc/zshenv /etc/zshrc for vim-rvm scripting \033[0m"
 sudo mv /etc/zshenv /etc/zshrc
 
