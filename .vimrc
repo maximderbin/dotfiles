@@ -80,6 +80,10 @@ else
   set gfn=mono\ 11
 endif
 
+set guioptions-=T " Removes top toolbar
+set guioptions-=r " Removes right hand scroll bar
+set go-=L " Removes left hand scroll bar
+
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
