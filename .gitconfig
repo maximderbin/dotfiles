@@ -5,6 +5,7 @@
 	email = babybeasimple@gmail.com
 [core]
 	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
 [merge]
 	tool = gvimdiff
 	conflictstyle = diff3

@@ -28,6 +28,15 @@ fi
 echo "\033[0;34mSymlinking .vimrc\033[0m"
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
+echo "\033[0;34mLooking for an existing git ignore...\033[0m"
+if [ -f ~/.gitignore ] || [ -h ~/.gitignore ]
+then
+  echo "\033[0;33mFound ~/.gitignore.\033[0m \033[0;32mBacking up to ~/.gitignore.old\033[0m";
+  mv ~/.gitignore ~/.gitignore.old;
+fi
+echo "\033[0;34mSymlinking .vimrc\033[0m"
+ln -s ~/.dotfiles/.gitignore ~/.gitignore
+
 echo "\033[0;34mLooking for an existing gem config...\033[0m"
 if [ -f ~/.gemrc ] || [ -h ~/.gemrc ]
 then
