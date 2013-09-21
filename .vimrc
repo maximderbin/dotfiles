@@ -87,16 +87,6 @@ set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 
-" Colorscheme
-colorscheme solarized
-
-if has('gui_running')
-  set background=dark
-else
-  let g:solarized_termcolors=256
-  set background=dark
-endif
-
 if has('mac')
   set gfn=menlo:h14
 else
@@ -165,3 +155,22 @@ au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
 au BufRead,BufNewFile *.rabl hi def link rubyRabl Function
 au BufRead,BufNewFile *.thor setf ruby
+
+" Plugins
+
+    " Solarized
+        syntax enable
+        " http://stackoverflow.com/questions/7278267/incorrect-colors-with-vim-in-iterm2-using-solarized#comment11144700_7278548
+        let g:solarized_termcolors=16
+        set background=dark
+        try
+            colorscheme solarized
+        catch /^Vim\%((\a\+)\)\=:E185/
+            echo "Solarized theme not found. Run :BundleInstall"
+        endtry
+
+        try
+            call togglebg#map("<Leader>b")
+        catch /^Vim\%((\a\+)\)\=:E117/
+            " :(
+        endtry
