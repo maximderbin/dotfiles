@@ -1,48 +1,71 @@
-set nocompatible  " be iMproved
+" be iMproved
+set nocompatible
 
-" Bundle
-filetype off      " Required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Vundle setup
+" Plugin manager
+"
+" Brief help:
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
+" for more details see :h vundle  or https://github.com/gmarik/vundle
+    filetype off     " required!
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    Bundle 'git://github.com/gmarik/vundle.git'
 
-Bundle 'gmarik/vundle'
+    " Bundles
+    " NOTE: comments after Bundle command are not allowed...
+    " Libs
+        " TextMate-like snippets
+        Bundle 'git://github.com/garbas/vim-snipmate'
+        Bundle 'git://github.com/babybeasimple/vim-snippets'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        " Provides easy code commenting
+        Bundle 'git://github.com/tomtom/tcomment_vim'
+        " Mappings to easily delete, change and add surroundings in pairs
+        Bundle 'git://github.com/tpope/vim-surround.git'
+        " Automatic closing of quotes, parenthesis, brackets, etc.
+        Bundle 'git://github.com/vim-scripts/delimitMate.vim.git'
+        " Syntax checking hacks
+        Bundle 'git://github.com/scrooloose/syntastic.git'
+        " Pairs of handy bracket mappings
+        Bundle 'git://github.com/tpope/vim-unimpaired'
+        " Enable repeating supported plugin maps with "."
+        Bundle 'git://github.com/tpope/vim-repeat'
+        " Makes it easy to align regions of text that match a pattern
+        Bundle 'git://github.com/godlygeek/tabular'
+        " Git wrapper
+        Bundle 'git://github.com/tpope/vim-fugitive.git'
+    " Interface
+        " Solarized Colorscheme
+        Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+    " HTML/HAML
+        " Runtime files for Haml and Sass
+        Bundle 'git://github.com/tpope/vim-haml.git'
+    " CSS/LESS
+        " CSS3 syntax support
+        Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
+        " Highlight colors in css files
+        Bundle 'git://github.com/ap/vim-css-color.git'
+    " JavaScript
+        " Vastly improved vim's javascript indentation
+        Bundle 'git://github.com/pangloss/vim-javascript.git'
+        " CoffeeScript support
+        Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+    " Ruby/Rails
+        " RVM support
+        Bundle 'git://github.com/tpope/vim-rvm'
+        " Rails support
+        Bundle 'git://github.com/tpope/vim-rails.git'
+        " Wisely add "end" in ruby, endfunction/endif/more
+        Bundle 'git://github.com/tpope/vim-endwise.git'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rvm'
-Bundle 'tomtom/tlib_vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
-Bundle 'babybeasimple/vim-snippets'
-Bundle 'adie/BlockDiff'
-Bundle 'godlygeek/tabular'
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/syntastic'
-Bundle 'skammer/vim-css-color'
-" Syntax group
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jinfield/vim-nginx'
-
-filetype plugin indent on " Required!
+    filetype plugin indent on     " required!
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
-
-" Command-T options
-let g:CommandTMaxFiles=20000
-
-" NERDtree settings
-map <C-e> :NERDTreeToggle<CR>
 
 syntax enable
 syntax on
@@ -142,4 +165,3 @@ au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
 au BufRead,BufNewFile *.rabl hi def link rubyRabl Function
 au BufRead,BufNewFile *.thor setf ruby
-au BufRead,BufNewFile /etc/nginx/* set ft=nginx
