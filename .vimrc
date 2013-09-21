@@ -174,3 +174,20 @@ au BufRead,BufNewFile *.thor setf ruby
         catch /^Vim\%((\a\+)\)\=:E117/
             " :(
         endtry
+
+" Shortcuts
+    " Disable <Arrow keys>
+        " Warning: nightmare mode!
+        inoremap <Up> <NOP>
+        inoremap <Down> <NOP>
+        inoremap <Left> <NOP>
+        inoremap <Right> <NOP>
+        noremap <Up> <NOP>
+        noremap <Down> <NOP>
+        noremap <Left> <NOP>
+        noremap <Right> <NOP>
+        " Navigate with <Ctrl>-hjkl in Insert mode
+        imap <C-h> <C-o>h
+        imap <C-j> <C-o>j
+        imap <C-k> <C-o>k
+        imap <C-l> <C-o>l
