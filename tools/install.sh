@@ -59,11 +59,19 @@ echo "\033[0;34mLooking for an existing zsh aliases...\033[0m"
 if [ -f ~/.aliases ] || [ -h ~/.aliases ]
 then
   echo "\033[0;33mFound ~/.aliases.\033[0m \033[0;32mBacking up to ~/.aliases.old\033[0m";
-  mv ~/.zshrc ~/.aliases.old;
+  mv ~/.aliases ~/.aliases.old;
 fi
-echo "\033[0;34mSymlinking .zshrc\033[0m"
+echo "\033[0;34mSymlinking .aliases\033[0m"
 ln -s ~/.dotfiles/.aliases ~/.aliases
 
+echo "\033[0;34mLooking for an existing .ctags...\033[0m"
+if [ -f ~/.ctags ] || [ -h ~/.ctags ]
+then
+  echo "\033[0;33mFound ~/.ctags.\033[0m \033[0;32mBacking up to ~/.ctags.old\033[0m";
+  mv ~/.ctags ~/.ctags.old;
+fi
+echo "\033[0;34mSymlinking .ctags\033[0m"
+ln -s ~/.dotfiles/.ctags ~/.ctags
 echo "\033[0;34mmv /etc/zshenv /etc/zshrc for vim-rvm scripting \033[0m"
 sudo mv /etc/zshenv /etc/zshrc
 

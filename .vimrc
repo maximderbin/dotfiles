@@ -18,10 +18,18 @@ set nocompatible
     " Bundles
     " NOTE: comments after Bundle command are not allowed...
     " Libs
+        " For FuzzyFinder
+        Bundle 'L9'
+        " For Vim Snipmate
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+    " Interface
+        " Solarized Colorscheme
+        Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+        " Buffer/file/command/tag/etc explorer with fuzzy matching
+        Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         " TextMate-like snippets
         Bundle 'git://github.com/garbas/vim-snipmate'
         Bundle 'git://github.com/babybeasimple/vim-snippets'
-        Bundle 'MarcWeber/vim-addon-mw-utils'
         " Provides easy code commenting
         Bundle 'git://github.com/tomtom/tcomment_vim'
         " Mappings to easily delete, change and add surroundings in pairs
@@ -38,9 +46,6 @@ set nocompatible
         Bundle 'git://github.com/godlygeek/tabular'
         " Git wrapper
         Bundle 'git://github.com/tpope/vim-fugitive.git'
-    " Interface
-        " Solarized Colorscheme
-        Bundle 'git://github.com/altercation/vim-colors-solarized.git'
     " HTML/HAML
         " Runtime files for Haml and Sass
         Bundle 'git://github.com/tpope/vim-haml.git'
@@ -174,6 +179,13 @@ au BufRead,BufNewFile *.thor setf ruby
         catch /^Vim\%((\a\+)\)\=:E117/
             " :(
         endtry
+
+    " FuzzyFinder
+        nmap ,f :FufFileWithCurrentBufferDir<CR>
+        nmap ,b :FufBuffer<CR>
+        nmap ,t :FufTaggedFile<CR>
+
+        let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
 
 " Shortcuts
     " Disable <Arrow keys>
