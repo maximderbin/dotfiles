@@ -21,7 +21,8 @@ set nocompatible
         " For FuzzyFinder
         Bundle 'L9'
         " For Vim Snipmate
-        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'git://github.com/MarcWeber/vim-addon-mw-utils'
+        Bundle 'git://github.com/tomtom/tlib_vim'
     " Interface
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
