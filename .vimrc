@@ -26,6 +26,8 @@ set nocompatible
     " Interface
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+        " A tree explorer plugin
+        Bundle 'git://github.com/scrooloose/nerdtree.git'
         " Buffer/file/command/tag/etc explorer with fuzzy matching
         Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         " TextMate-like snippets
@@ -73,9 +75,6 @@ set nocompatible
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
 
-syntax enable
-syntax on
-
 set lazyredraw
 set showmode
 set wildmenu
@@ -86,11 +85,9 @@ nmap <silent> ,sv :so $MYVIMRC<cr>
 
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set ruler  " Ruler on
 set nu  " Line numbers on
-set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 
 if has('mac')
@@ -122,24 +119,12 @@ set mat=5  " Bracket blinking.
 set list
 " Show $ at end of line and trailing space as ~
 set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
-set novisualbell  " No blinking .
-set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
-
-" gvim specific
-set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes
-
-" Backups & Files
-set backup                     " Enable creation of backup file.
-set backupdir=~/.vim/backups " Where backups will go.
-set directory=~/.vim/tmp     " Where temporary files will go.
 
 set wrapscan
 set ch=2
 
 set timeoutlen=500
-set history=100
 
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 set scrolloff=8
@@ -149,7 +134,6 @@ set synmaxcol=2048
 set cpoptions+=$
 set hlsearch
 set ignorecase
-set wrap
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняж;abcdefghijklmnopqrstuvwxyz;
 
@@ -162,8 +146,35 @@ au BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child co
 au BufRead,BufNewFile *.rabl hi def link rubyRabl Function
 au BufRead,BufNewFile *.thor setf ruby
 
-" Plugins
+" Environment
+    " Store lots of history entries: :cmdline and search patterns
+        set history=1000
+    " Backup и swp files
+        " Don't create backups
+        set nobackup
+        " Don't create swap files
+        set noswapfile
+    " AutoReload .vimrc
+    " See http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+    " Source the vimrc file after saving it
+        if has("autocmd")
+          autocmd! bufwritepost .vimrc source $MYVIMRC
+        endif
 
+" Interface
+    " Wrap long lines
+        set wrap
+        " Don't break words when wrapping
+        " Only available when compiled with the +linebreak feature
+        set linebreak
+        " Show ↪ at the beginning of wrapped lines
+        if has("linebreak")
+          let &sbr = nr2char(8618).' '
+        endif
+    " No beeps, no flashes
+        set visualbell
+
+" Plugins
     " Solarized
         syntax enable
         " http://stackoverflow.com/questions/7278267/incorrect-colors-with-vim-in-iterm2-using-solarized#comment11144700_7278548
@@ -180,15 +191,27 @@ au BufRead,BufNewFile *.thor setf ruby
         catch /^Vim\%((\a\+)\)\=:E117/
             " :(
         endtry
-
+    " NERDTree
+        nmap <C-e> :NERDTreeToggle<CR>
+        " let NERDTreeShowBookmarks=1
+        let NERDTreeChDirMode=2
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeShowHidden=1
+        let NERDTreeKeepTreeInNewTab=0
+        " Disable display of the 'Bookmarks' label and 'Press ? for help' text
+        let NERDTreeMinimalUI=1
+        " Use arrows instead of + ~ chars when displaying directories
+        let NERDTreeDirArrows=1
+        " let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
     " FuzzyFinder
         nmap ,f :FufFileWithCurrentBufferDir<CR>
         nmap ,b :FufBuffer<CR>
         nmap ,t :FufTaggedFile<CR>
-
         let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
 
 " Shortcuts
+    " Disable mouse
+        set mouse=
     " Disable <Arrow keys>
         " Warning: nightmare mode!
         inoremap <Up> <NOP>
@@ -204,3 +227,9 @@ au BufRead,BufNewFile *.thor setf ruby
         imap <C-j> <C-o>j
         imap <C-k> <C-o>k
         imap <C-l> <C-o>l
+    " Navigate through wrapped lines
+        noremap j gj
+        noremap k gk
+    " <Esc><Esc>
+        " Clear the search highlight in Normal mode
+        nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
