@@ -1,11 +1,11 @@
 [color]
-	ui = true
+  ui = true
 [user]
-	name = babybeasimple
-	email = babybeasimple@gmail.com
+  name = babybeasimple
+  email = babybeasimple@gmail.com
 [core]
-	editor = /usr/bin/vim
-	excludesfile = ~/.gitignore
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
 [merge]
-	tool = gvimdiff
-	conflictstyle = diff3
+  tool = vimdiff
+  conflictstyle = diff3
