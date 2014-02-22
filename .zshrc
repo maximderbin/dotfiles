@@ -35,7 +35,11 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-# Customize to your needs...
+
+# brew
+export PATH=/usr/local/bin:$PATH
+
+# rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # aliases
