@@ -26,6 +26,8 @@ set nocompatible
     " Interface
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+        " Status line
+        Bundle 'git://github.com/bling/vim-airline.git'
         " A tree explorer plugin
         Bundle 'git://github.com/scrooloose/nerdtree.git'
         " Buffer/file/command/tag/etc explorer with fuzzy matching
@@ -133,8 +135,6 @@ set ignorecase
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняж;abcdefghijklmnopqrstuvwxyz;
 
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-16(\ %l,%c-%v\ %)%P
-
 hi PreProc guifg=red ctermfg=red guibg=grey15
 au BufRead,BufNewFile *.hamlc setf haml
 au BufRead,BufNewFile *.rabl setf ruby
@@ -187,6 +187,11 @@ au BufRead,BufNewFile *.thor setf ruby
         catch /^Vim\%((\a\+)\)\=:E117/
             " :(
         endtry
+    " Airline
+        " Colorscheme
+        let g:airline_theme='solarized'
+        " Syntastic integration
+        let g:airline#extensions#syntastic#enabled=1
     " NERDTree
         nmap <C-e> :NERDTreeToggle<CR>
         " let NERDTreeShowBookmarks=1
