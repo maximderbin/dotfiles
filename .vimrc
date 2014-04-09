@@ -63,10 +63,6 @@ set nocompatible
         " CoffeeScript support
         Bundle 'git://github.com/kchmck/vim-coffee-script.git'
     " Ruby/Rails
-        " RVM support
-        Bundle 'git://github.com/tpope/vim-rvm'
-        " Rails support
-        Bundle 'git://github.com/tpope/vim-rails.git'
         " Wisely add "end" in ruby, endfunction/endif/more
         Bundle 'git://github.com/tpope/vim-endwise.git'
 
@@ -137,7 +133,7 @@ set ignorecase
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняж;abcdefghijklmnopqrstuvwxyz;
 
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%{exists('g:loaded_rvm')?rvm#statusline():''}%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-16(\ %l,%c-%v\ %)%P
 
 hi PreProc guifg=red ctermfg=red guibg=grey15
 au BufRead,BufNewFile *.hamlc setf haml
