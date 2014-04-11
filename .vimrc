@@ -193,7 +193,7 @@ au BufRead,BufNewFile *.thor setf ruby
         " Syntastic integration
         let g:airline#extensions#syntastic#enabled=1
     " NERDTree
-        nmap <C-e> :NERDTreeToggle<CR>
+        noremap <silent> <C-e> :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
         " let NERDTreeShowBookmarks=1
         let NERDTreeChDirMode=2
         let NERDTreeQuitOnOpen=1
