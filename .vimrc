@@ -70,81 +70,15 @@ set nocompatible
 
     filetype plugin indent on     " required!
 
-" Add recently accessed projects menu (project plugin)
-set viminfo^=!
-
-set lazyredraw
-set showmode
-set wildmenu
-set wildignore+=vendor/ruby/*,.git,tmp/*,public/system/*
-
-nmap <silent> ,ev :e $MYVIMRC<cr>
-nmap <silent> ,sv :so $MYVIMRC<cr>
-
-set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set autowrite  " Writes on make/shell commands
-set ruler  " Ruler on
-set nu  " Line numbers on
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-
-if has('mac')
-  set gfn=menlo:h14
-else
-  set gfn=mono\ 11
-endif
-
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
-
-" Formatting (some of these are for coding in C and C++)
-set ts=2  " Tabs are 2 spaces
-set bs=2  " Backspace over everything in insert mode
-set shiftwidth=2  " Tabs under smart indent
-set nocp incsearch
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tcqr
-set cindent
-set autoindent
-set smarttab
-set expandtab
-
-" Visual
-set showmatch  " Show matching brackets.
-set mat=5  " Bracket blinking.
-set list
-" Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
-set laststatus=2  " Always show status line.
-
-set wrapscan
-set ch=2
-
-set timeoutlen=500
-
-set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
-set scrolloff=8
-
-set synmaxcol=2048
-
-set cpoptions+=$
-set hlsearch
-set ignorecase
-
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняж;abcdefghijklmnopqrstuvwxyz;
-
-hi PreProc guifg=red ctermfg=red guibg=grey15
-au BufRead,BufNewFile *.hamlc setf haml
-au BufRead,BufNewFile *.rabl setf ruby
-au BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
-au BufRead,BufNewFile *.rabl hi def link rubyRabl Function
-au BufRead,BufNewFile *.thor setf ruby
-
 " Environment
     " Store lots of history entries: :cmdline and search patterns
-        set history=1000
+    set history=1000
+    " Backspacing settings
+        " start     allow backspacing over the start of insert;
+        "           CTRL-W and CTRL-U stop once at the start of insert.
+        " indent    allow backspacing over autoindent
+        " eol       allow backspacing over line breaks (join lines)
+        set backspace=indent,eol,start
     " Backup и swp files
         " Don't create backups
         set nobackup
@@ -158,17 +92,87 @@ au BufRead,BufNewFile *.thor setf ruby
         endif
 
 " Interface
+    " Font
+    if has('mac')
+      set gfn=menlo:h14
+    else
+      set gfn=mono\ 11
+    endif
+    " Removes top toolbar
+    set guioptions-=T
+     " Removes right hand scroll bar
+    set guioptions-=r
+    " Removes left hand scroll bar
+    set go-=L
+    " Show line numbers
+    set number
+    " Show matching brackets
+    set showmatch
+    " Bracket blinking
+    set mat=5
+    " Enhance command-line completion
+    " Only available when compiled with the +wildmenu feature
+        set wildmenu
+        " OS X
+        set wildignore+=*.DS_Store
+        " Version control
+        set wildignore+=.hg,.git,.svn
+        " Ruby on rails
+        set wildignore+=vendor/ruby/*,tmp/*,public/system/*
+    " Minimal number of lines to keep above and below the cursor
+    " Typewriter mode = keep current line in the center
+    set scrolloff=999
+    " Display invisible characters
+        set list
+        " Show $ at end of line and trailing space as ~
+        set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
     " Wrap long lines
-        set wrap
-        " Don't break words when wrapping
-        " Only available when compiled with the +linebreak feature
-        set linebreak
-        " Show ↪ at the beginning of wrapped lines
-        if has("linebreak")
-          let &sbr = nr2char(8618).' '
-        endif
+    set wrap
+    " Don't break words when wrapping
+    " Only available when compiled with the +linebreak feature
+    set linebreak
+    " Show ↪ at the beginning of wrapped lines
+    if has("linebreak")
+      let &sbr = nr2char(8618).' '
+    endif
+    " Time to wait after ESC (default causes an annoying delay)
+    set timeoutlen=250
     " No beeps, no flashes
-        set visualbell
+    set visualbell
+    " Copy indent from current line when starting a new line
+    set autoindent
+    " Do smart indenting when starting a new line
+    " Only available when compiled with the +smartindent feature
+    set smartindent
+    " Number of spaces to use for each step of (auto)indent
+    set shiftwidth=2
+    " Use spaces instead of tab
+    set expandtab
+    " Number of spaces that a tab counts for
+    set tabstop=2
+    " Last window always has a status line
+    set laststatus=2
+
+" Search
+    " While typing a search command, show pattern matches as it is typed
+    " Only available when compiled with the +extra_search feature
+    set incsearch
+    " When there is a previous search pattern, highlight all its matches
+    " Only available when compiled with the +extra_search feature
+    set hlsearch
+    " Ignore case in search patterns
+    set ignorecase
+    " Override the 'ignorecase' if the search pattern contains upper case characters
+    set smartcase
+    " All matches in a line are substituted instead of one
+    set gdefault
+
+" File specific
+    autocmd BufRead,BufNewFile *.hamlc setf haml
+    autocmd BufRead,BufNewFile *.rabl setf ruby
+    autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
+    autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
+    autocmd BufRead,BufNewFile *.thor setf ruby
 
 " Plugins
     " Solarized
@@ -234,3 +238,30 @@ au BufRead,BufNewFile *.thor setf ruby
     " <Esc><Esc>
         " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
+" Some mess
+    set lazyredraw
+    set showmode
+
+    set cf  " Enable error files & error jumping.
+    set clipboard+=unnamed  " Yanks go on clipboard instead.
+    set autowrite  " Writes on make/shell commands
+    set ruler  " Ruler on
+
+    " Formatting (some of these are for coding in C and C++)
+    set nocp incsearch
+    set cinoptions=:0,p0,t0
+    set cinwords=if,else,while,do,for,switch,case
+    set formatoptions=tcqr
+    set cindent
+
+    set wrapscan
+    set ch=2
+
+    set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
+
+    set synmaxcol=2048
+
+    set cpoptions+=$
+
+    hi PreProc guifg=red ctermfg=red guibg=grey15
