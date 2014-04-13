@@ -152,6 +152,8 @@ set nocompatible
     set tabstop=2
     " Last window always has a status line
     set laststatus=2
+    " Highlight the screen vertical line of the cursor
+    set cursorcolumn
 
 " Search
     " While typing a search command, show pattern matches as it is typed
