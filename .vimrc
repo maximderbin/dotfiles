@@ -65,6 +65,8 @@ set nocompatible
         " CoffeeScript support
         Bundle 'git://github.com/kchmck/vim-coffee-script.git'
     " Ruby/Rails
+        " Rails support
+        Bundle 'git://github.com/tpope/vim-rails.git'
         " Wisely add "end" in ruby, endfunction/endif/more
         Bundle 'git://github.com/tpope/vim-endwise.git'
 
