@@ -51,14 +51,18 @@ set nocompatible
         Bundle 'git://github.com/godlygeek/tabular'
         " Git wrapper
         Bundle 'git://github.com/tpope/vim-fugitive.git'
-    " HTML/HAML
+    " HTML
         " Runtime files for Haml and Sass
         Bundle 'git://github.com/tpope/vim-haml.git'
-    " CSS/LESS
+        " Jade
+        Bundle 'git://github.com/digitaltoad/vim-jade.git'
+    " CSS
         " CSS3 syntax support
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
         " Highlight colors in css files
         Bundle 'git://github.com/ap/vim-css-color.git'
+        " Stylus syntax support
+        Bundle 'git://github.com/wavded/vim-stylus.git'
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'git://github.com/pangloss/vim-javascript.git'
@@ -177,6 +181,7 @@ set nocompatible
     autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
     autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
     autocmd BufRead,BufNewFile *.thor setf ruby
+    autocmd filetype javascript set sw=4 ts=4 expandtab
 
 " Plugins
     " Solarized
