@@ -68,6 +68,8 @@ set nocompatible
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         " CoffeeScript support
         Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+        " beautify
+        Bundle 'https://github.com/maksimr/vim-jsbeautify.git'
     " Ruby/Rails
         " Rails support
         Bundle 'git://github.com/tpope/vim-rails.git'
@@ -181,7 +183,7 @@ set nocompatible
     autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
     autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
     autocmd BufRead,BufNewFile *.thor setf ruby
-    autocmd filetype javascript set sw=4 ts=4 expandtab
+    autocmd filetype javascript set sw=4 ts=4 noexpandtab
 
 " Plugins
     " Solarized
@@ -247,6 +249,8 @@ set nocompatible
     " <Esc><Esc>
         " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+    " Beautify
+        autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 
 " Some mess
     set lazyredraw
