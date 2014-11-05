@@ -184,6 +184,7 @@ set nocompatible
     autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
     autocmd BufRead,BufNewFile *.thor setf ruby
     autocmd filetype javascript set sw=4 ts=4 noexpandtab
+    autocmd BufRead,BufNewFile *.conf set sw=4 ts=4 noexpandtab
 
 " Plugins
     " Solarized
