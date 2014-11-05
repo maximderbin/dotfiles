@@ -252,6 +252,8 @@ set nocompatible
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
     " Beautify
         autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+    " Allow pasting blocks of code without indenting
+        set pastetoggle=<F2>
 
 " Some mess
     set lazyredraw
