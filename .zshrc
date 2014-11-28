@@ -36,6 +36,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# locale
+export LC_ALL=en_US.UTF-8
+
 # brew
 export PATH=/Applications/LibreOffice.app/Contents/MacOS:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -43,13 +46,14 @@ export PATH=/usr/local/bin:$PATH
 # heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# boot-docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/simpleman/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# node
+export NVM_DIR="/Users/maximderbin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.private_aliases ]] && source ~/.private_aliases
