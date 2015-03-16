@@ -183,8 +183,7 @@ set nocompatible
     autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
     autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
     autocmd BufRead,BufNewFile *.thor setf ruby
-    autocmd filetype javascript set sw=4 ts=4 noexpandtab
-    autocmd BufRead,BufNewFile *.conf set sw=4 ts=4 noexpandtab
+    autocmd filetype javascript set sw=4 ts=4
 
 " Plugins
     " Solarized
