@@ -66,10 +66,12 @@ set nocompatible
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'git://github.com/pangloss/vim-javascript.git'
+        " React
+        Bundle 'git://github.com/mxw/vim-jsx.git'
         " CoffeeScript support
         Bundle 'git://github.com/kchmck/vim-coffee-script.git'
         " beautify
-        Bundle 'https://github.com/maksimr/vim-jsbeautify.git'
+        Bundle 'git://github.com/maksimr/vim-jsbeautify.git'
     " Ruby/Rails
         " Rails support
         Bundle 'git://github.com/tpope/vim-rails.git'
@@ -184,6 +186,7 @@ set nocompatible
     autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
     autocmd BufRead,BufNewFile *.thor setf ruby
     autocmd filetype javascript set sw=4 ts=4
+    autocmd BufRead,BufNewFile *.json setf javascript
 
 " Plugins
     " Solarized
@@ -207,6 +210,8 @@ set nocompatible
         let g:airline_theme='solarized'
         " Syntastic integration
         let g:airline#extensions#syntastic#enabled=1
+    " Syntastic
+        let g:syntastic_javascript_checkers = ['eslint']
     " NERDTree
         noremap <silent> <C-e> :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
         " let NERDTreeShowBookmarks=1
