@@ -50,9 +50,14 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # node
-export NVM_DIR="/Users/maximderbin/.nvm"
+export NVM_DIR="/Users/simpleman/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+
+# docker
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/simpleman/.boot2docker/certs/boot2docker-vm
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
