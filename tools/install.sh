@@ -34,8 +34,17 @@ then
   echo "\033[0;33mFound ~/.gitignore.\033[0m \033[0;32mBacking up to ~/.gitignore.old\033[0m";
   mv ~/.gitignore ~/.gitignore.old;
 fi
-echo "\033[0;34mSymlinking .vimrc\033[0m"
+echo "\033[0;34mSymlinking .gitignore\033[0m"
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
+
+echo "\033[0;34mLooking for an existing agignore...\033[0m"
+if [ -f ~/.agignore ] || [ -h ~/.agignore ]
+then
+  echo "\033[0;33mFound ~/.agignore.\033[0m \033[0;32mBacking up to ~/.agignore.old\033[0m";
+  mv ~/.agignore ~/.agignore.old;
+fi
+echo "\033[0;34mSymlinking .agignore\033[0m"
+ln -s ~/.dotfiles/.agignore ~/.agignore
 
 echo "\033[0;34mLooking for an existing gem config...\033[0m"
 if [ -f ~/.gemrc ] || [ -h ~/.gemrc ]
