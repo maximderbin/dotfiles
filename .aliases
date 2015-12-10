@@ -23,3 +23,6 @@ alias rr="zeus rake routes"
 alias rs="zeus server"
 alias rc="zeus console"
 alias z="zeus"
+
+# Apps
+alias skype="sudo /Applications/Skype.app/Contents/MacOS/Skype"
