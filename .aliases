@@ -3,6 +3,7 @@ alias tlf="tail -f"
 
 # git
 alias gcd="git checkout dev"
+alias gfall='for dir in $(pwd)/*; do (echo "\033[0;34m> $dir\033[0m" && cd "$dir" && git checkout master && git pull origin master && echo "\n"); done'
 
 # Bundler
 alias b="bundle"
