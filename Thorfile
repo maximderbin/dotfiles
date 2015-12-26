@@ -9,8 +9,8 @@ APPS = %w(
 class Default < Thor
   APPS.each do |app|
     desc "#{app}", "run rails command in #{app}"
-    define_method "#{app}" do |cmd|
-      system("cd #{app} && rails #{cmd}")
+    define_method "#{app}" do |*args|
+      system("cd #{app} && rails #{args.join(' ')}")
     end
   end
 end
