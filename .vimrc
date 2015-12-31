@@ -214,6 +214,7 @@ set nocompatible
         let g:syntastic_javascript_checkers = ['eslint']
     " NERDTree
         noremap <silent> <C-e> :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
+        map <silent> <C-d> :1<CR>X
         " let NERDTreeShowBookmarks=1
         let NERDTreeChDirMode=2
         let NERDTreeQuitOnOpen=1
