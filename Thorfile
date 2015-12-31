@@ -17,5 +17,15 @@ class Default < Thor
     define_method "#{app}:log" do |env = 'development'|
       system("tail -f #{app}/log/#{env}.log")
     end
+
+    desc "#{app}:migrate", "run migrations in #{app}"
+    define_method "#{app}:migrate" do
+      system("cd #{app} && rake db:migrate")
+    end
+
+    desc "#{app}:rollback", "rollback migrations in #{app}"
+    define_method "#{app}:rollback" do
+      system("cd #{app} && rake db:rollback")
+    end
   end
 end
