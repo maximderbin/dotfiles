@@ -33,6 +33,14 @@ class Default < Thor
       system("cd #{app} && rake db:migrate")
     end
 
+    desc 'apps:migrate', 'run migrations in all apps'
+    define_method 'apps:migrate' do
+      APPS.each do |app|
+        system("echo '\033[0;34m> #{app}\033[0m'")
+        system("cd #{app} && rake db:migrate")
+      end
+    end
+
     desc "#{app}:rollback", "rollback migrations in #{app}"
     define_method "#{app}:rollback" do
       system("cd #{app} && rake db:rollback")
