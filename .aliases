@@ -18,12 +18,11 @@ alias gi="gem install"
 alias giv="gem install -v"
 
 # Rails
-alias r="zeus"
-alias rk="zeus rake"
-alias rr="zeus rake routes"
-alias rs="zeus server"
-alias rc="zeus console"
-alias z="zeus"
+alias be="bundle exec"
+alias r="be rails"
+alias rc="r console"
+alias rs="r server"
+alias rg="r generate"
 alias t="thor"
 
 # Apps

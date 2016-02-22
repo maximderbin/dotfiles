@@ -43,11 +43,12 @@ export LC_ALL=en_US.UTF-8
 export PATH=/Applications/LibreOffice.app/Contents/MacOS:$PATH
 export PATH=/usr/local/bin:$PATH
 
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # heroku
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # node
 export NVM_DIR="/Users/simpleman/.nvm"
