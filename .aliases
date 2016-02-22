@@ -27,3 +27,4 @@ alias t="thor"
 
 # Apps
 alias skype="sudo /Applications/Skype.app/Contents/MacOS/Skype"
+alias wthr="curl http://wttr.in/Chicago"
