@@ -2,7 +2,7 @@
   ui = true
 [user]
   name = maximderbin
-  email = babybeasimple@gmail.com
+  email = maxim@derbin.io
 [core]
   editor = /usr/local/bin/vim
   excludesfile = ~/.gitignore
