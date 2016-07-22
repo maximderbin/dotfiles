@@ -43,9 +43,10 @@ export LC_ALL=en_US.UTF-8
 export PATH=/Applications/LibreOffice.app/Contents/MacOS:$PATH
 export PATH=/usr/local/bin:$PATH
 
-# rbenv
+# rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export DISABLE_SPRING=true
 
 # heroku
 export PATH="/usr/local/heroku/bin:$PATH"
