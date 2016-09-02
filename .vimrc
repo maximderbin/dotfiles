@@ -51,18 +51,17 @@ set nocompatible
         Bundle 'git://github.com/godlygeek/tabular'
         " Git wrapper
         Bundle 'git://github.com/tpope/vim-fugitive.git'
+    " CSV
+        " CSV support
+        Bundle 'git://github.com/chrisbra/csv.vim.git'
     " HTML
         " Runtime files for Haml and Sass
         Bundle 'git://github.com/tpope/vim-haml.git'
-        " Jade
-        Bundle 'git://github.com/digitaltoad/vim-jade.git'
     " CSS
         " CSS3 syntax support
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
         " Highlight colors in css files
         Bundle 'git://github.com/ap/vim-css-color.git'
-        " Stylus syntax support
-        Bundle 'git://github.com/wavded/vim-stylus.git'
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'git://github.com/pangloss/vim-javascript.git'
