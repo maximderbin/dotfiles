@@ -28,6 +28,7 @@ set nocompatible
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         " Status line
         Bundle 'git://github.com/bling/vim-airline.git'
+        Bundle 'git://github.com/vim-airline/vim-airline-themes.git'
         " A tree explorer plugin
         Bundle 'git://github.com/scrooloose/nerdtree.git'
         " Buffer/file/command/tag/etc explorer with fuzzy matching
