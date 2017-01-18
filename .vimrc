@@ -60,6 +60,8 @@ set nocompatible
     " HTML
         " Runtime files for Haml and Sass
         Bundle 'git://github.com/tpope/vim-haml.git'
+        " Slim
+        Bundle 'git://github.com/slim-template/vim-slim.git'
     " CSS
         " CSS3 syntax support
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
