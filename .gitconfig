@@ -1,8 +1,9 @@
+[user]
+  name = Maxim Derbin
+  email = maxim@derbin.io
+[github "user"]
 [color]
   ui = true
-[user]
-  name = maximderbin
-  email = maxim@derbin.io
 [core]
   editor = /usr/local/bin/vim
   excludesfile = ~/.gitignore
