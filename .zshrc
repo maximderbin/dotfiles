@@ -15,3 +15,8 @@ plugins=(git)
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
+
+# rails
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export DISABLE_SPRING=true
