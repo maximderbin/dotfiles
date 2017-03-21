@@ -15,8 +15,14 @@ plugins=(git)
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
+<<<<<<< Updated upstream
 
 # rails
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export DISABLE_SPRING=true
+
+# python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
