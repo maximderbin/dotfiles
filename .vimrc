@@ -72,8 +72,6 @@ set nocompatible
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         " React
         Bundle 'git://github.com/mxw/vim-jsx.git'
-        " CoffeeScript support
-        Bundle 'git://github.com/kchmck/vim-coffee-script.git'
         " beautify
         Bundle 'git://github.com/maksimr/vim-jsbeautify.git'
     " Ruby/Rails
