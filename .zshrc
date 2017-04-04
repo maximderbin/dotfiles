@@ -15,7 +15,6 @@ plugins=(git)
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
-<<<<<<< Updated upstream
 
 # rails
 export PATH="$HOME/.rbenv/bin:$PATH"
