@@ -238,6 +238,8 @@ set nocompatible
 " Shortcuts
     " Disable mouse
         set mouse=
+    " Remap ESC to jj
+        imap jj <Esc>
     " Disable <Arrow keys>
         " Warning: nightmare mode!
         inoremap <Up> <NOP>
