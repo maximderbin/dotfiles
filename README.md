@@ -3,7 +3,7 @@ dotfiles
 not only .
 Install
 =======
-    curl -L https://github.com/babybeasimple/dotfiles/raw/master/tools/install.sh | sh
+    curl -L https://github.com/maximderbin/dotfiles/raw/master/tools/install.sh | sh
 
 TODO
 =======
