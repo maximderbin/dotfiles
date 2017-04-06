@@ -23,7 +23,11 @@ brew install git
 brew install zsh
 brew install vim --with-override-system-vi
 brew install ctags-exuberant
+brew install pyenv
+brew install nodejs
+brew install ag
 
 brew cask install iterm2
-
 brew cask install skype
+brew cask install spotify
+brew cask install slack
