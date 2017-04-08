@@ -57,11 +57,6 @@ set nocompatible
     " CSV
         " CSV support
         Bundle 'git://github.com/chrisbra/csv.vim.git'
-    " HTML
-        " Runtime files for Haml and Sass
-        Bundle 'git://github.com/tpope/vim-haml.git'
-        " Slim
-        Bundle 'git://github.com/slim-template/vim-slim.git'
     " CSS
         " CSS3 syntax support
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
@@ -75,8 +70,6 @@ set nocompatible
         " beautify
         Bundle 'git://github.com/maksimr/vim-jsbeautify.git'
     " Ruby/Rails
-        " Rails support
-        Bundle 'git://github.com/tpope/vim-rails.git'
         " Wisely add "end" in ruby, endfunction/endif/more
         Bundle 'git://github.com/tpope/vim-endwise.git'
 
