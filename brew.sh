@@ -32,3 +32,4 @@ brew cask install skype
 brew cask install slack
 brew cask install goofy
 brew cask install spotify
+brew cask install dropbox
