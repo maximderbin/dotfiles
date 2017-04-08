@@ -9,6 +9,8 @@
 # Add hot keys for switching langs
 # Fix sleep mode killing battery to 0%
 # Reset desctop icons settings
+# Show date
+# Show time in am/pm
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
