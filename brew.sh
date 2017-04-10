@@ -25,6 +25,10 @@ brew install vim --with-override-system-vi
 brew install ctags-exuberant
 brew install pyenv
 brew install nodejs
+brew install postgres
+brew install redis
+brew install mysql56
+brew install libcouchbase
 brew install ag
 
 brew cask install iterm2
