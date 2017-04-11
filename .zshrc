@@ -20,3 +20,7 @@ source $ZSH/oh-my-zsh.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export HTTP_USERID=mderbin
+export REMOTE_ADDR=127.0.0.1
+export REMOTE_USER=mderbin
