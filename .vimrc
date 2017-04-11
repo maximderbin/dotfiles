@@ -47,6 +47,7 @@ set nocompatible
         Bundle 'git://github.com/vim-scripts/delimitMate.vim.git'
         " Syntax checking hacks
         Bundle 'git://github.com/scrooloose/syntastic.git'
+        Bundle 'git://github.com/mtscout6/syntastic-local-eslint.vim.git'
         " Pairs of handy bracket mappings
         Bundle 'git://github.com/tpope/vim-unimpaired'
         " Enable repeating supported plugin maps with "."
@@ -200,7 +201,7 @@ set nocompatible
         " Syntastic integration
         let g:airline#extensions#syntastic#enabled=1
     " Syntastic
-        let g:syntastic_javascript_checkers = ['eslint']
+        let g:syntastic_javascript_checkers=['eslint']
     " NERDTree
         noremap <silent> <C-e> :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
         map <silent> <C-d> :1<CR>X
@@ -249,9 +250,19 @@ set nocompatible
         " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
     " Beautify
-        autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+        autocmd FileType javascript noremap <buffer>  <c-f> :call EslintFix()<cr>
     " Allow pasting blocks of code without indenting
         set pastetoggle=<F2>
+
+" Functiuons
+function! EslintFix()
+  " Save current cursor position "
+  let l:winview = winsaveview()
+  " run eslint fix on current buffer "
+  ! /Users/mderbin/code/inops/inDB/ui/node_modules/.bin/eslint --fix %
+  " Restore cursor position "
+  call winrestview(l:winview)
+endfunction
 
 " Some mess
     set lazyredraw
