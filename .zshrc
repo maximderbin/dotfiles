@@ -14,6 +14,7 @@ ZSH_POWERLINE_SHOW_TIME=false
 plugins=(git)
 
 source $HOME/.aliases
+source $HOME/.linkedin.env.zsh
 source $ZSH/oh-my-zsh.sh
 
 # python
