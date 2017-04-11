@@ -23,6 +23,9 @@ set nocompatible
         " For Vim Snipmate
         Bundle 'git://github.com/MarcWeber/vim-addon-mw-utils'
         Bundle 'git://github.com/tomtom/tlib_vim'
+    " Style
+        " Editor Config
+        Bundle 'git://github.com/editorconfig/editorconfig-vim'
     " Interface
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
@@ -173,15 +176,6 @@ set nocompatible
     set smartcase
     " All matches in a line are substituted instead of one
     set gdefault
-
-" File specific
-    autocmd BufRead,BufNewFile *.hamlc setf haml
-    autocmd BufRead,BufNewFile *.rabl setf ruby
-    autocmd BufRead,BufNewFile *.rabl syn keyword rubyRabl node attribute object child collection attributes glue extends
-    autocmd BufRead,BufNewFile *.rabl hi def link rubyRabl Function
-    autocmd BufRead,BufNewFile *.thor setf ruby
-    autocmd filetype javascript set sw=2 ts=2
-    autocmd BufRead,BufNewFile *.json setf javascript
 
 " Plugins
     " Solarized
