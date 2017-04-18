@@ -15,6 +15,9 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+# Create temporary folder for downloads
+mkdir ~/init
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -605,6 +608,9 @@ sudo mdutil -E / > /dev/null
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Download Solorized Dark theme
+curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Solarized%20Dark.terminal > ~/init/Solarized\ Dark.terminal
+
 # Use a modified version of the Solarized Dark theme by default in Terminal.app
 osascript <<EOD
 
@@ -613,7 +619,7 @@ tell application "Terminal"
 	local allOpenedWindows
 	local initialOpenedWindows
 	local windowID
-	set themeName to "Solarized Dark - Patched"
+	set themeName to "Solarized Dark"
 
 	(* Store the IDs of all the open terminal windows. *)
 	set initialOpenedWindows to id of every window
@@ -665,7 +671,8 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-# open "${HOME}/init/Solarized Dark.itermcolors"
+curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark.itermcolors > ~/init/Solarized\ Dark.itermcolors
+open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -882,4 +889,8 @@ for app in "Activity Monitor" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
+
+# Remove temporary folder
+rm -rf ~/init
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
