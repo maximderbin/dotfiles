@@ -11,6 +11,8 @@ ZSH_POWERLINE_SHOW_OS=false
 ZSH_POWERLINE_SHOW_RETURN_CODE=true
 ZSH_POWERLINE_SHOW_TIME=false
 
+BREW_PREFIX=$(brew --prefix)
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -18,7 +20,10 @@ source /usr/local/etc/profile.d/z.sh
 source $HOME/.aliases
 source $HOME/.linkedin.env.zsh
 
-# python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+path=(
+  $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # override system sed with gnu-sed
+  $HOME/.pyenv/bin                        # pyenv
+  $path
+)
