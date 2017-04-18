@@ -45,9 +45,8 @@ set nocompatible
         Bundle 'git://github.com/tpope/vim-surround.git'
         " Automatic closing of quotes, parenthesis, brackets, etc.
         Bundle 'git://github.com/vim-scripts/delimitMate.vim.git'
-        " Syntax checking hacks
-        Bundle 'git://github.com/scrooloose/syntastic.git'
-        Bundle 'git://github.com/mtscout6/syntastic-local-eslint.vim.git'
+        " Syntax checking
+        Bundle 'git://github.com/w0rp/ale.git'
         " Pairs of handy bracket mappings
         Bundle 'git://github.com/tpope/vim-unimpaired'
         " Enable repeating supported plugin maps with "."
@@ -198,10 +197,6 @@ set nocompatible
     " Airline
         " Colorscheme
         let g:airline_theme='solarized'
-        " Syntastic integration
-        let g:airline#extensions#syntastic#enabled=1
-    " Syntastic
-        let g:syntastic_javascript_checkers=['eslint']
     " NERDTree
         noremap <silent> <C-e> :NERDTreeToggle<CR>:silent NERDTreeMirror<CR>
         map <silent> <C-d> :1<CR>X
