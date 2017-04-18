@@ -14,7 +14,7 @@ ZSH_POWERLINE_SHOW_TIME=false
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH/z.sh
+source /usr/local/etc/profile.d/z.sh
 source $HOME/.aliases
 source $HOME/.linkedin.env.zsh
 

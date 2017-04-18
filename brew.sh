@@ -20,6 +20,7 @@ brew install gnu-sed --with-default-names
 brew install tree
 brew install git
 brew install zsh
+brew install z
 brew install vim --with-override-system-vi
 brew install ctags-exuberant
 brew install pyenv
