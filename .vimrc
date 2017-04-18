@@ -162,6 +162,14 @@ set nocompatible
     set laststatus=2
     " Highlight the screen vertical line of the cursor
     set cursorcolumn
+    " Ask what to do about unsaved/read-only files
+    set cf
+
+" Rendering/Performance
+    " Lasyredraw for performance
+    set lazyredraw
+    " Improve redrawing
+    set synmaxcol=128
 
 " Search
     " While typing a search command, show pattern matches as it is typed
@@ -258,30 +266,3 @@ function! EslintFix()
   " Restore cursor position "
   call winrestview(l:winview)
 endfunction
-
-" Some mess
-    set lazyredraw
-    set showmode
-
-    set cf  " Enable error files & error jumping.
-    set clipboard+=unnamed  " Yanks go on clipboard instead.
-    set autowrite  " Writes on make/shell commands
-    set ruler  " Ruler on
-
-    " Formatting (some of these are for coding in C and C++)
-    set nocp incsearch
-    set cinoptions=:0,p0,t0
-    set cinwords=if,else,while,do,for,switch,case
-    set formatoptions=tcqr
-    set cindent
-
-    set wrapscan
-    set ch=2
-
-    set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
-
-    set synmaxcol=2048
-
-    set cpoptions+=$
-
-    hi PreProc guifg=red ctermfg=red guibg=grey15
