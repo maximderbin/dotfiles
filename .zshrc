@@ -13,9 +13,10 @@ ZSH_POWERLINE_SHOW_TIME=false
 
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+source $ZSH/z.sh
 source $HOME/.aliases
 source $HOME/.linkedin.env.zsh
-source $ZSH/oh-my-zsh.sh
 
 # python
 export PYENV_ROOT="$HOME/.pyenv"
