@@ -98,6 +98,8 @@ set nocompatible
         if has("autocmd")
           autocmd! bufwritepost .vimrc source $MYVIMRC
         endif
+    " Yanks go on clipboard instead
+    set clipboard+=unnamed
 
 " Interface
     " Font
