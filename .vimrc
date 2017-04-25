@@ -26,6 +26,8 @@ set nocompatible
     " Style
         " Editor Config
         Bundle 'git://github.com/editorconfig/editorconfig-vim'
+        " Wrap and unwrap function arguments, lists, and dictionaries
+        Bundle 'git://github.com/FooSoft/vim-argwrap'
     " Interface
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
@@ -227,6 +229,10 @@ set nocompatible
         let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
     " Ag
         let g:ag_working_path_mode='r'
+    " ArgWrap
+        nnoremap <silent> <leader>a :ArgWrap<CR>
+        let g:argwrap_padded_braces = '{'
+        let g:argwrap_tail_comma = 1
 
 " Shortcuts
     " Disable mouse
