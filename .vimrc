@@ -168,6 +168,8 @@ set nocompatible
     set cursorcolumn
     " Ask what to do about unsaved/read-only files
     set cf
+    " Highlight change selection
+    set cpoptions+=$
 
 " Rendering/Performance
     " Lasyredraw for performance
