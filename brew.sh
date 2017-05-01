@@ -17,6 +17,7 @@ brew install git
 brew install gnu-sed --with-default-names
 brew install libcouchbase
 brew install moreutils
+brew install mycli
 brew install mysql56
 brew install nodejs
 brew install postgres
