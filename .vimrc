@@ -259,9 +259,8 @@ set nocompatible
     " Navigate through wrapped lines
         noremap j gj
         noremap k gk
-    " <Esc><Esc>
-        " Clear the search highlight in Normal mode
-        nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+    " Clear the search highlight in Normal mode
+        nnoremap <silent> <C-j> :nohlsearch<CR><Esc>
     " Beautify
         autocmd FileType javascript noremap <buffer>  <c-f> :call EslintFix()<cr>
     " Allow pasting blocks of code without indenting
