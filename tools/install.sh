@@ -74,13 +74,13 @@ echo "\033[0;34mSymlinking .zshrc\033[0m"
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
 echo "\033[0;34mLooking for an existing zsh aliases...\033[0m"
-if [ -f ~/.aliases ] || [ -h ~/.aliases ]
+if [ -f ~/.aliases.zsh ] || [ -h ~/.aliases.zsh ]
 then
-  echo "\033[0;33mFound ~/.aliases.\033[0m \033[0;32mBacking up to ~/.aliases.old\033[0m";
-  mv ~/.aliases ~/.aliases.old;
+  echo "\033[0;33mFound ~/.aliases.zsh\033[0m \033[0;32mBacking up to ~/.aliases.zsh.old\033[0m";
+  mv ~/.aliases.zsh ~/.aliases.zsh.old;
 fi
 echo "\033[0;34mSymlinking .aliases\033[0m"
-ln -s ~/.dotfiles/.aliases ~/.aliases
+ln -s ~/.dotfiles/.aliases.zsh ~/.aliases.zsh
 
 echo "\033[0;34mLooking for an existing .ctags...\033[0m"
 if [ -f ~/.ctags ] || [ -h ~/.ctags ]

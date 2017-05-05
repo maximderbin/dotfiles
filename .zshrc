@@ -18,7 +18,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/etc/profile.d/z.sh
-source $HOME/.aliases
+source $HOME/.aliases.zsh
 source $HOME/.linkedin.env.zsh
 
 eval "$(pyenv init -)"
