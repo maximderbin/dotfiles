@@ -1,24 +1,6 @@
 # Unix
 alias tlf="tail -f"
 
-# git
-alias gfall='for dir in $(pwd)/*; do (echo "\033[0;34m> $dir\033[0m" && cd "$dir" && git checkout master && git pull origin master && echo "\n"); done'
-
-# Tests and Specs
-alias s="bin/rspec"
-alias c="bundle exec cucumber"
-
-# Rubygems
-alias gi="gem install"
-alias giv="gem install -v"
-
-# Rails
-alias r="bin/rails"
-alias rc="r console"
-alias rs="r server"
-alias rg="r generate"
-alias rk="bin/rake"
-
 # Apps
 alias skype="sudo /Applications/Skype.app/Contents/MacOS/Skype"
 alias wthr="curl http://wttr.in/redwood_city"
