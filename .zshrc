@@ -12,12 +12,12 @@ ZSH_POWERLINE_SHOW_RETURN_CODE=true
 ZSH_POWERLINE_SHOW_TIME=false
 
 BREW_PREFIX=$(brew --prefix)
-EDITOR=/usr/local/bin/vim
+EDITOR=$BREW_PREFIX/bin/vim
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/etc/profile.d/z.sh
+source $BREW_PREFIX/etc/profile.d/z.sh
 source $HOME/.aliases.zsh
 source $HOME/.linkedin.env.zsh
 
