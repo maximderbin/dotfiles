@@ -12,6 +12,7 @@ ZSH_POWERLINE_SHOW_RETURN_CODE=true
 ZSH_POWERLINE_SHOW_TIME=false
 
 BREW_PREFIX=$(brew --prefix)
+EDITOR=/usr/local/bin/vim
 
 plugins=(git)
 
