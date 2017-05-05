@@ -24,6 +24,7 @@ brew install postgres
 brew install pyenv
 brew install redis
 brew install rename
+brew install tmux
 brew install tree
 brew install vim --override-system-vi
 brew install z
