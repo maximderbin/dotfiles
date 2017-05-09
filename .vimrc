@@ -74,9 +74,11 @@ set nocompatible
         Bundle 'git://github.com/mxw/vim-jsx.git'
         " beautify
         Bundle 'git://github.com/maksimr/vim-jsbeautify.git'
-    " Ruby/Rails
+    " Ruby
         " Wisely add "end" in ruby, endfunction/endif/more
         Bundle 'git://github.com/tpope/vim-endwise.git'
+    " Python
+        Bundle 'git://github.com/hdima/python-syntax.git'
 
     filetype plugin indent on     " required!
 
