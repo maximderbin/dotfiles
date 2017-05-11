@@ -671,7 +671,9 @@ EOD
 # Install the Solarized Dark theme for iTerm
 curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark.itermcolors > ~/init/Solarized\ Dark.itermcolors
 open "${HOME}/init/Solarized Dark.itermcolors"
-# TODO: set Menlo for Powerline fornt
+
+# Set up MenloForPowerline as default font
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" MenloForPowerline-Regular 14' ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # Enable Secure Keyboard Entry in Terminal.app
 # See: https://security.stackexchange.com/a/47786/8918
