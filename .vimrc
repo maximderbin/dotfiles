@@ -120,6 +120,8 @@ set nocompatible
     set go-=L
     " Show line numbers
     set number
+    " Show numbers relative
+    set relativenumber
     " Show matching brackets
     set showmatch
     " Bracket blinking
