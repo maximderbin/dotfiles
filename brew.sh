@@ -19,6 +19,7 @@ brew install libcouchbase
 brew install moreutils
 brew install mycli
 brew install mysql56
+brew install neovim/neovim/neovim
 brew install nodejs
 brew install postgres
 brew install pyenv
