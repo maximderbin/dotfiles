@@ -57,8 +57,8 @@ set nocompatible
         Bundle 'git://github.com/godlygeek/tabular'
         " Git wrapper
         Bundle 'git://github.com/tpope/vim-fugitive.git'
-        " Ag wrapper
-        Bundle 'git://github.com/rking/ag.vim.git'
+        " Rip Grep wrapper
+        Bundle 'git://github.com/jremmen/vim-ripgrep.git'
     " CSV
         " CSV support
         Bundle 'git://github.com/chrisbra/csv.vim.git'
@@ -233,8 +233,6 @@ set nocompatible
         nmap ,b :FufBuffer<CR>
         nmap ,t :FufTaggedFile<CR>
         let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
-    " Ag
-        let g:ag_working_path_mode='r'
     " ArgWrap
         nnoremap <silent> <leader>a :ArgWrap<CR>
         let g:argwrap_padded_braces = '{'
