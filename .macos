@@ -375,6 +375,12 @@ defaults write com.apple.dashboard mcx-disabled -bool false
 # Show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool false
 
+# Enable ctrl + left arrow / ctrl + right arrow to switch spaces
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":79:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":80:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":81:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":82:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
