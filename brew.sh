@@ -15,6 +15,7 @@ brew install findutils
 brew install git
 brew install gnu-sed --with-default-names
 brew install libcouchbase
+brew install lnav
 brew install moreutils
 brew install mycli
 brew install mysql56
