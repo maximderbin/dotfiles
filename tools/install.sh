@@ -46,6 +46,15 @@ fi
 echo "\033[0;34mSymlinking .agignore\033[0m"
 ln -s ~/.dotfiles/.agignore ~/.agignore
 
+echo "\033[0;34mLooking for an existing .myclirc...\033[0m"
+if [ -f ~/.myclirc ] || [ -h ~/.myclirc ]
+then
+  echo "\033[0;33mFound ~/.myclirc\033[0m \033[0;32mBacking up to ~/.myclirc.old\033[0m";
+  mv ~/.myclirc ~/.myclirc.old;
+fi
+echo "\033[0;34mSymlinking .myclirc\033[0m"
+ln -s ~/.dotfiles/.myclirc ~/.myclirc
+
 echo "\033[0;34mLooking for an existing gem config...\033[0m"
 if [ -f ~/.gemrc ] || [ -h ~/.gemrc ]
 then
