@@ -33,6 +33,7 @@ brew install z
 brew install zsh
 
 brew install Caskroom/versions/google-chrome-canary
+brew install Caskroom/versions/firefoxdeveloperedition
 
 brew cask install iterm2
 brew cask install skype
