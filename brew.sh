@@ -35,7 +35,7 @@ brew install zsh
 brew install Caskroom/versions/google-chrome-canary
 brew install Caskroom/versions/firefoxdeveloperedition
 
-brew cask install iterm2
+brew cask install iterm2-nightly
 brew cask install skype
 brew cask install slack
 brew cask install goofy
