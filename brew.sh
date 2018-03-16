@@ -28,7 +28,7 @@ brew install rename
 brew install ripgrep
 brew install tmux
 brew install tree
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install z
 brew install zsh
 
