@@ -174,6 +174,8 @@ set nocompatible
     set cf
     " Highlight change selection
     set cpoptions+=$
+    " Disable beep and flash
+    set noerrorbells visualbell t_vb=
 
 " Rendering/Performance
     " Lasyredraw for performance
