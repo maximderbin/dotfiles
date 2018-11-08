@@ -34,11 +34,12 @@ brew install zsh
 
 brew install Caskroom/versions/firefoxdeveloperedition
 
+brew cask install dropbox
+brew cask install gitter
+brew cask install goofy
 brew cask install iterm2-nightly
+brew cask install licecap
 brew cask install skype
 brew cask install slack
-brew cask install goofy
-brew cask install telegram
-brew cask install gitter
 brew cask install spotify
-brew cask install dropbox
+brew cask install telegram
