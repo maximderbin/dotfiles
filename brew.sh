@@ -29,6 +29,7 @@ brew install ripgrep
 brew install tmux
 brew install tree
 brew install vim --with-override-system-vi
+brew install wget
 brew install z
 brew install zsh
 
@@ -43,3 +44,6 @@ brew cask install skype
 brew cask install slack
 brew cask install spotify
 brew cask install telegram
+brew cask install vagrant
+brew cask install vagrant-manager
+brew cask install virtualbox
