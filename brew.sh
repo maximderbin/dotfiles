@@ -39,7 +39,7 @@ brew cask install dropbox
 brew cask install gitter
 brew cask install goofy
 brew cask install iterm2-nightly
-brew cask install keepassx
+brew cask install keepassxc
 brew cask install licecap
 brew cask install skype
 brew cask install slack
