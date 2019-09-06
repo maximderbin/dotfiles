@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Automatic show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
+
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+sudo systemsetup -settimezone "America/Los_Angeles" > /dev/null
+
+# Change clock format to AM/PM mode with date
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
+
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Move dock to the left
+defaults write com.apple.dock pinning -string "left"
+
+# Set the icon size of Dock items to 50 pixels
+defaults write com.apple.dock tilesize -int 50
+
+# Enable the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 1
+
+# Enable Dashboard
+defaults write com.apple.dashboard mcx-disabled -bool false
+
+# Show Dashboard as a Space
+defaults write com.apple.dock dashboard-in-overlay -bool false
+
+# Enable ctrl + left arrow / ctrl + right arrow to switch spaces
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":79:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":80:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":81:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c 'Set "AppleSymbolicHotKeys":82:"enabled" true' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+# Disable hot corners
+# Top left screen corner
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+# Top right screen corner
+defaults write com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-tr-modifier -int 0
+# Bottom left screen corner
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -bool true
