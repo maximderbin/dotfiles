@@ -27,6 +27,8 @@ brew install wget
 brew install z
 brew install zsh
 
+brew install az
+brew install kubectl
 brew install libcouchbase
 brew install mysql56
 brew install nodejs
