@@ -37,6 +37,7 @@ brew install redis
 
 brew cask install alfred
 brew cask install bettertouchtool
+brew cask install docker
 brew cask install dropbox
 brew cask install firefox
 brew cask install goofy
