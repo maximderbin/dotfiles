@@ -145,7 +145,7 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "0564557E-02AB-439E-85D1-50DFEC527C71",
+  "BTTPresetUUID" : "F780F3B7-9448-4C26-9152-2D5FCBBCB3B0",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "BT.G",
@@ -260,6 +260,26 @@
           "BTTShortcutKeyCode" : 18,
           "BTTShortcutModifierKeys" : 262144,
           "BTTOrder" : 1,
+          "BTTDisplayOrder" : 0,
+          "BTTAutoAdaptToKeyboardLayout" : 0
+        },
+        {
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 158,
+          "BTTPredefinedActionName" : "Lock Screen",
+          "BTTAdditionalConfiguration" : "262145",
+          "BTTEnabled2" : 1,
+          "BTTKeyboardShortcutKeyboardType" : 58,
+          "BTTUUID" : "1F48C0CC-FABD-468B-BDB4-9B45C9001E6F",
+          "BTTTriggerOnDown" : 1,
+          "BTTNotesInsteadOfDescription" : 0,
+          "BTTLayoutIndependentChar" : "DELETE",
+          "BTTEnabled" : 1,
+          "BTTModifierMode" : 0,
+          "BTTShortcutKeyCode" : 51,
+          "BTTShortcutModifierKeys" : 262144,
+          "BTTOrder" : 6,
           "BTTDisplayOrder" : 0,
           "BTTAutoAdaptToKeyboardLayout" : 0
         },
