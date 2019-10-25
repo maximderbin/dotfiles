@@ -197,6 +197,16 @@ set nocompatible
     " All matches in a line are substituted instead of one
     set gdefault
 
+" Spellcheck
+    " Enable spellcheck
+    set spell
+    " Use en language for spellcheck
+    set spelllang=en_us
+    " Store spellfile in cloud to sync between multiple machines
+    set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+    " Enable word completion
+    set complete+=kspell
+
 " Plugins
     " Solarized
         syntax enable
