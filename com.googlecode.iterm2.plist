@@ -4,6 +4,8 @@
 <dict>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -67,10 +69,12 @@
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 163 224 275 0 0 1440 877 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>412 544 616 174 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 888 620 392 0 0 2560 1577 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>160 0 1274 877 0 0 1440 877 </string>
+	<string>265 253 650 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>343 214 650 452 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
@@ -756,6 +760,7 @@
 	<array>
 		<string>3.3.2</string>
 		<string>3.3.3</string>
+		<string>3.3.8</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -764,6 +769,13 @@
 		<string>Menlo</string>
 		<string>Monaco</string>
 	</array>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {2560, 1600}}</string>
+		<key>topLeft</key>
+		<string>{269, 595}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
@@ -774,7 +786,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>F015DE1C-E9A4-45BE-8221-F0ECE6594ED5</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>14</integer>
+	<integer>26</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1272,11 +1284,11 @@
 		<array>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>currentSession.path</string>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -1296,9 +1308,25 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1402,6 +1430,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentSession.termid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1461,14 +1497,6 @@
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -1572,7 +1600,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-13T19:34:42Z</date>
+	<date>2020-02-19T08:44:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1586,6 +1614,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.8</string>
 </dict>
 </plist>
