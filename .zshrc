@@ -21,6 +21,8 @@ source $BREW_PREFIX/etc/profile.d/z.sh
 source $HOME/.aliases.zsh
 source $HOME/.linkedin.env.zsh
 
+eval "$(rbenv init -)"
+
 path=(
   $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # override system sed with gnu-sed
   $path
