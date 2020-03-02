@@ -37,6 +37,8 @@ brew install redis
 
 brew cask install alfred
 brew cask install bettertouchtool
+brew cask install blue-jeans
+brew cask install blue-jeans-browser-plugin
 brew cask install docker
 brew cask install dropbox
 brew cask install firefox
