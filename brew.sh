@@ -14,6 +14,7 @@ brew install curl
 brew install findutils
 brew install git
 brew install gnu-sed
+brew install gpg
 brew install htop
 brew install lnav
 brew install moreutils

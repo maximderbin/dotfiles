@@ -1,7 +1,9 @@
 [user]
   name = Maxim Derbin
   email = maxim@derbin.io
-[github "user"]
+  signingkey = 9109EFAF74E57221
+[github]
+  user = maximderbin
 [color]
   ui = true
 [core]
