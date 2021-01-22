@@ -1,7 +1,7 @@
 [user]
   name = Maxim Derbin
   email = maxim@derbin.io
-  signingkey = 9109EFAF74E57221
+  signingkey = 62782C7695A6D32E6C7DFD7FC500F2E002FABCE4
 [github]
   user = maximderbin
 [color]
@@ -30,3 +30,7 @@
     end\n\
     File.open(%(%A), %(w)) {|f| f.write(b)}\n\
     exit 1 if b.include?(%(<)*%L)'"
+[commit]
+  gpgsign = true
+[gpg]
+  program = /usr/local/bin/gpg
