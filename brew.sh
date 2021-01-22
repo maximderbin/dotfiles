@@ -12,6 +12,7 @@ brew install coreutils
 brew install ctags-exuberant
 brew install curl
 brew install findutils
+brew install gh
 brew install git
 brew install gnu-sed
 brew install gpg
