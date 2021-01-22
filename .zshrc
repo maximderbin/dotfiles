@@ -2,6 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE="true"
+ZSH_DISABLE_COMPFIX="true"
 
 ZSH_THEME="solarized-powerline"
 ZSH_POWERLINE_SHOW_USER=false
