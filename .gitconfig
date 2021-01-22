@@ -32,5 +32,7 @@
     exit 1 if b.include?(%(<)*%L)'"
 [commit]
   gpgsign = true
+[pull]
+  rebase = true
 [gpg]
   program = /usr/local/bin/gpg
