@@ -16,6 +16,7 @@ brew install git
 brew install gnu-sed
 brew install gpg
 brew install htop
+brew install jq
 brew install lnav
 brew install moreutils
 brew install mycli
