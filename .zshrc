@@ -22,6 +22,7 @@ source $BREW_PREFIX/etc/profile.d/z.sh
 source $HOME/.aliases.zsh
 source $HOME/.linkedin.env.zsh
 
+autoload -U compinit; compinit
 eval "$(rbenv init -)"
 
 path=(
