@@ -26,6 +26,7 @@ brew install ripgrep
 brew install tmux
 brew install tree
 brew install vim
+brew install watch
 brew install wget
 brew install z
 brew install zsh
