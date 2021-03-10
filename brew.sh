@@ -38,18 +38,18 @@ brew install nodejs
 brew install postgres
 brew install redis
 
-brew cask install alfred
-brew cask install bettertouchtool
-brew cask install blue-jeans
-brew cask install blue-jeans-browser-plugin
-brew cask install docker
-brew cask install dropbox
-brew cask install firefox
-brew cask install goofy
-brew cask install iterm2
-brew cask install keepassxc
-brew cask install licecap
-brew cask install skype
-brew cask install slack
-brew cask install spotify
-brew cask install telegram
+brew install --cask alfred
+brew install --cask bettertouchtool
+brew install --cask blue-jeans
+brew install --cask blue-jeans-browser-plugin
+brew install --cask docker
+brew install --cask dropbox
+brew install --cask firefox
+brew install --cask iterm2
+brew install --cask keepassxc
+brew install --cask licecap
+brew install --cask messenger
+brew install --cask skype
+brew install --cask slack
+brew install --cask spotify
+brew install --cask telegram
