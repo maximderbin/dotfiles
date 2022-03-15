@@ -50,7 +50,9 @@ brew install --cask iterm2
 brew install --cask keepassxc
 brew install --cask licecap
 brew install --cask messenger
+brew install --cask signal
 brew install --cask skype
 brew install --cask slack
 brew install --cask spotify
 brew install --cask telegram
+brew install --cask whatsapp
