@@ -23,7 +23,6 @@ source $HOME/.aliases.zsh
 source $HOME/.linkedin.env.zsh
 
 autoload -U compinit; compinit
-eval "$(rbenv init -)"
 
 path=(
   $BREW_PREFIX/opt/gnu-sed/libexec/gnubin # override system sed with gnu-sed
