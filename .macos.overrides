@@ -23,7 +23,7 @@ defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Move dock to the left
-defaults write com.apple.dock pinning -string "left"
+defaults write com.apple.dock orientation left
 
 # Set the icon size of Dock items to 50 pixels
 defaults write com.apple.dock tilesize -int 50
