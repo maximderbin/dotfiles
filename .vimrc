@@ -38,9 +38,6 @@ set nocompatible
         Bundle 'git://github.com/scrooloose/nerdtree.git'
         " Buffer/file/command/tag/etc explorer with fuzzy matching
         Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
-        " TextMate-like snippets
-        Bundle 'git://github.com/garbas/vim-snipmate'
-        Bundle 'git://github.com/babybeasimple/vim-snippets'
         " Provides easy code commenting
         Bundle 'git://github.com/tomtom/tcomment_vim'
         " Mappings to easily delete, change and add surroundings in pairs
