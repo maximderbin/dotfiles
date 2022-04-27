@@ -36,3 +36,5 @@
   rebase = true
 [gpg]
   program = /usr/local/bin/gpg
+[url "git@github.com:"]
+	insteadOf = git://github.com/
