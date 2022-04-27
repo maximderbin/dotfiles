@@ -30,6 +30,11 @@ defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  h:mm a'
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
+# Wipe all (default) app icons from the Dock
+# This is only really useful when setting up a new Mac, or if you don’t use
+# the Dock to launch apps.
+defaults write com.apple.dock persistent-apps -array
+
 # Move dock to the left
 defaults write com.apple.dock orientation left
 
