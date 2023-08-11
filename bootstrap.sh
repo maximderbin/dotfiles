@@ -26,7 +26,7 @@ curl -s https://raw.githubusercontent.com/kuoe0/oh-my-zsh-solarized-powerline-th
 # Download Solorized Dark theme
 curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Solarized%20Dark.terminal > ~/init/Solarized\ Dark.terminal
 # Download Menlo font for Powerline
-curl -s https://github.com/abertsch/Menlo-for-Powerline/blob/master/Menlo%20for%20Powerline.ttf > ~/init/Menlo\ Regular\ for\ Powerline.ttf
+curl -s https://github.com/lxbrtsch/Menlo-for-Powerline/blob/master/Menlo%20for%20Powerline.ttf > ~/init/Menlo\ Regular\ for\ Powerline.ttf
 # Install Menlo for Powerlone font
 open "${HOME}/init/Menlo Regular for Powerline.ttf"
 
@@ -35,8 +35,8 @@ open "${HOME}/init/Menlo Regular for Powerline.ttf"
 ###############################################################################
 
 # Install the Solarized Dark theme
-curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark.itermcolors > ~/init/Solarized\ Dark.itermcolors
-open "${HOME}/init/Solarized Dark.itermcolors"
+curl -s https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/iTerm2%20Solarized%20Dark.itermcolors > ~/init/iTerm2\ Solarized\ Dark.itermcolors
+open "${HOME}/init/iTerm2 Solarized Dark.itermcolors"
 
 # Set up MenloForPowerline as default font
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" MenloForPowerline-Regular 14' ~/Library/Preferences/com.googlecode.iterm2.plist
