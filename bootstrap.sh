@@ -41,5 +41,13 @@ open "${HOME}/init/iTerm2 Solarized Dark.itermcolors"
 # Set up MenloForPowerline as default font
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" MenloForPowerline-Regular 14' ~/Library/Preferences/com.googlecode.iterm2.plist
 
+###############################################################################
+# VIM                                                                         #
+###############################################################################
+
+# Install vundle package manager
+ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 # Remove temporary folder
 rm -rf ~/init
