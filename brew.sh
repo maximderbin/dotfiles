@@ -28,31 +28,19 @@ brew install tree
 brew install vim
 brew install watch
 brew install wget
+brew install yq
 brew install z
 brew install zsh
 
 brew install az
 brew install kubectl
-brew install libcouchbase
-brew install mysql56
-brew install nodejs
-brew install postgres
-brew install redis
 
-brew install --cask alfred
-brew install --cask bettertouchtool
-brew install --cask blue-jeans
-brew install --cask blue-jeans-browser-plugin
-brew install --cask docker
-brew install --cask dropbox
 brew install --cask firefox
-brew install --cask iterm2
+brew install --cask iterm3
 brew install --cask keepassxc
 brew install --cask licecap
-brew install --cask messenger
 brew install --cask signal
-brew install --cask skype
 brew install --cask slack
 brew install --cask spotify
 brew install --cask telegram
-brew install --cask whatsapp
+brew install --cask visual-studio-code
