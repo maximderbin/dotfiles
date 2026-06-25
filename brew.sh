@@ -11,6 +11,8 @@ brew upgrade
 brew install coreutils
 brew install ctags-exuberant
 brew install curl
+brew install direnv
+brew install eza
 brew install findutils
 brew install gh
 brew install git
@@ -36,9 +38,11 @@ brew install az
 brew install kubectl
 
 brew install --cask firefox
+brew install --cask ghostty
 brew install --cask iterm3
 brew install --cask keepassxc
 brew install --cask licecap
+brew install --cask qfinder-pro
 brew install --cask signal
 brew install --cask slack
 brew install --cask spotify
